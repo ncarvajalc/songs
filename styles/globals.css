@@ -3,25 +3,83 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-color: #fff;
+  --foreground-color: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-color: #000;
+    --foreground-color: #fff;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: rgb(var(--foreground-color));
+  text-decoration: underline;
+}
+
+.button {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 2px solid var(--foreground-color);
+  background-color: transparent;
+  color: rgb(var(--foreground-color));
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.button:hover,
+.button-like-dislike:hover {
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+}
+
+.caption {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.button-like-dislike {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: solid 2px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.pressed {
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+  transform: scale(1.2);
 }
