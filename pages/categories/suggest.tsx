@@ -55,7 +55,10 @@ export default function Suggest() {
         )}{" "}
         {successfullSubmit && !loading && <p>¡Gracias por tu sugerencia! 🎉</p>}
         {!successfullSubmit && !loading && (
-          <form className="flex flex-col gap-1" onSubmit={handleFormSubmit}>
+          <form
+            className="flex flex-col gap-1 mb-4"
+            onSubmit={handleFormSubmit}
+          >
             <label htmlFor="name">Categoría *</label>
             <textarea
               onChange={handleInputChange}
@@ -87,7 +90,9 @@ export default function Suggest() {
             <Loader />
           </div>
         )}
-        <Link href="/categories/random"> ← Regresar</Link>
+        <Link href="/categories/random" className="no-underline">
+          ← Regresar
+        </Link>
       </div>
     </Layout>
   );

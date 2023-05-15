@@ -1,0 +1,30 @@
+{
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Canciones",
+  "short_name": "Canciones",
+  "description": "Sugerencias de canciones para pasar el rato",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
