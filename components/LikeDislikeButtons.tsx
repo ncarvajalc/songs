@@ -105,7 +105,7 @@ export default function LikeDislikeButtons({
   };
 
   return (
-    <div className="flex justify-center space-x-4 }">
+    <div className="flex justify-center items-center space-x-4 ">
       <button
         className={`button-like-dislike ${liked && "pressed"}`}
         onClick={handleLike}
@@ -117,6 +117,15 @@ export default function LikeDislikeButtons({
         onClick={handleDislike}
       >
         <ThumbDownOffAltIcon />
+      </button>
+      {/* { Tool tip on hover} */}
+      <button
+        title="Los botones de me gusta / no me gusta sirven para saber qué categorías
+        prefieres y cuáles no. Así podemos dar mejores recomendaciones en el
+        futuro"
+        className="button-help"
+      >
+        ?
       </button>
     </div>
   );
