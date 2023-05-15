@@ -87,7 +87,7 @@ export default function Random({ categories }: HomeProps) {
         );
       case loadingStates.finalState:
         return (
-          <div className=" flex flex-col justify-center">
+          <div className=" flex flex-col">
             <p className="caption">{randomCategory?.name}</p>
             <LikeDislikeButtons
               randomCategory={randomCategory}
@@ -111,6 +111,11 @@ export default function Random({ categories }: HomeProps) {
         <button className="button my-4" onClick={handleGetRandomCategory}>
           {loadingState}
         </button>
+        {loadingState === loadingStates.finalState && (
+          <Link href="/categories/suggest" className="button mb-4">
+            ¿Quieres sugerir una nueva categoría?
+          </Link>
+        )}
         <Link href="/" className="no-underline">
           ← Regresar a inicio
         </Link>
